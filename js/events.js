@@ -44,6 +44,9 @@ async function loadEvents() {
                         </a>
 
                     </div>
+                     <div class="event-image">
+                           <img src="Images/${event.Image}" alt="${event.Title}">
+                    </div>
 
                 </div>
                 `;
