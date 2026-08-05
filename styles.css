@@ -156,16 +156,14 @@
   }
 
   @media (max-width:860px){
-    .nav-links{ position:fixed; inset:64px 1rem auto 1rem; background:var(--paper-card); border:1px solid var(--line); border-radius:var(--radius); flex-direction:column; align-items:flex-start; padding:1.5rem; gap:1rem; box-shadow:var(--shadow); transform:translateY(-14px); opacity:0; pointer-events:none; transition:transform .3s var(--ease), opacity .3s var(--ease); }
-    .nav-links.open{ transform:translateY(0); opacity:1; pointer-events:auto; }
-    .nav-toggle{ display:inline-flex; flex-direction:column; }
-    .hero-grid{ grid-template-columns:1fr; }
-    .hero-visual{ order:-1; max-width:360px; margin-inline:auto; }
-    .values{ grid-template-columns:1fr; }
+    ...
     .courses-grid{ grid-template-columns:1fr; }
     .about-grid{ grid-template-columns:1fr; }
     .footer-grid{ grid-template-columns:1fr; gap:2.25rem; }
-  }
++   .grid-2{ grid-template-columns:1fr; }
++   .grid-3{ grid-template-columns:1fr; }
+}
+
 
 /* =========================
    Meet the founders
