@@ -1,0 +1,68 @@
+const SHEET_URL =
+    "https://opensheet.elk.sh/144CifvfZXn6lU4cqm9MQGRK62xYkVCrj0wRiB8_x2RM/Parent.Social.Schedule";
+
+async function loadEvents() {
+
+    const container = document.getElementById("events-list");
+
+    if (!container) return;
+
+    try {
+
+        const response = await fetch(SHEET_URL);
+        const events = await response.json();
+
+        container.innerHTML = "";
+
+        events
+            .filter(event => event.Active === "TRUE")
+            .sort((a, b) => new Date(a.Date) - new Date(b.Date))
+            .forEach(event => {
+
+                const html = `
+                <div class="event-card reveal" style="margin-bottom:1.5rem;">
+
+                    <div class="event-when">
+                        <span class="dow">${new Date(event.Date).toLocaleDateString('en-GB',{weekday:'short'})}</span>
+                        <span class="day">${new Date(event.Date).getDate()}</span>
+                        <span class="mon">${new Date(event.Date).toLocaleDateString('en-GB',{month:'long'})}</span>
+                    </div>
+
+                    <div class="event-body">
+
+                        <h3>${event.Title}</h3>
+
+                        <p class="event-meta">
+                            ${event.Time} · ${event.Venue}
+                        </p>
+
+                        <p>${event.Description}</p>
+
+                        <a class="btn btn-primary"
+                           href="${event["Booking Link"]}">
+                           Reserve your free ticket
+                        </a>
+
+                    </div>
+
+                </div>
+                `;
+
+                container.insertAdjacentHTML("beforeend", html);
+
+            });
+
+    }
+
+    catch (error) {
+
+        container.innerHTML =
+            "<p>Unable to load events at the moment.</p>";
+
+        console.error(error);
+
+    }
+
+}
+
+loadEvents();
