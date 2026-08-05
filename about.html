@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — Parent Club</title>
+<title>About &mdash; Parent Club</title>
 <meta name="description" content="Parent Club is run by parents, for parents: supportive antenatal classes for South Manchester.">
 <meta name="theme-color" content="#4422bb">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%234422bb'/%3E%3Ccircle cx='13' cy='16' r='6' fill='none' stroke='%23ccccff' stroke-width='2'/%3E%3Ccircle cx='19' cy='16' r='6' fill='none' stroke='%23f2ffff' stroke-width='2'/%3E%3C/svg%3E">
@@ -137,7 +137,7 @@
       <div class="flinks">
         <a href="mailto:parentclubmcr@gmail.com">parentclubmcr@gmail.com</a>
         <a href="https://www.instagram.com/parentclub_/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <span style="color:var(--footer-muted); font-size:.95rem;">Levenshulme, Burnage &amp; Stockport, Greater Manchester</span>
+        <span class="footer-location">Levenshulme, Burnage &amp; Stockport, Greater Manchester</span>
       </div>
     </div>
   </div>
@@ -146,21 +146,7 @@
     <span>Concept redesign &mdash; content courtesy of parentclub.uk</span>
   </div>
 </footer>
-<script>
-(function(){
-  document.documentElement.classList.add('js');
-  var header=document.querySelector('.site-header');
-  if(header){ var onScroll=function(){ header.classList.toggle('scrolled', window.scrollY>8); }; onScroll(); window.addEventListener('scroll',onScroll,{passive:true}); }
-  var toggle=document.querySelector('.nav-toggle'), nav=document.getElementById('primaryNav');
-  if(toggle&&nav){ toggle.addEventListener('click',function(){ var open=nav.classList.toggle('open'); toggle.setAttribute('aria-expanded',open?'true':'false'); });
-    nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',function(){ nav.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); }); }); }
-  var revealEls=document.querySelectorAll('.reveal');
-  if(revealEls.length){ if('IntersectionObserver' in window){ var io=new IntersectionObserver(function(entries){ entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); } }); },{threshold:.15}); revealEls.forEach(function(el){ io.observe(el); }); } else { revealEls.forEach(function(el){ el.classList.add('is-visible'); }); } }
-  var form=document.getElementById('templateForm');
-  if(form){ form.addEventListener('submit',function(ev){ ev.preventDefault(); var email=document.getElementById('email'); if(!email.checkValidity()){ email.reportValidity(); return; } form.hidden=true; var n=document.getElementById('formNote'), su=document.getElementById('formSuccess'); if(n)n.hidden=true; if(su)su.hidden=false; }); }
-  var cform=document.getElementById('contactForm');
-  if(cform){ cform.addEventListener('submit',function(ev){ ev.preventDefault(); cform.hidden=true; var cs=document.getElementById('contactSuccess'); if(cs)cs.hidden=false; }); }
-})();
-</script>
+
+  <script src="js/site.js"></script>
 </body>
 </html>

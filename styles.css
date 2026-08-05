@@ -20,13 +20,13 @@
   html{ scroll-behavior:smooth; }
   body{
     margin:0; background:var(--paper); color:var(--ink);
-    font-family:'Work Sans',sans-serif; line-height:1.6;
+    font-family:'Poppins',sans-serif; line-height:1.6;
     -webkit-font-smoothing:antialiased;
   }
   img{ max-width:100%; display:block; }
   a{ color:inherit; }
   button{ font-family:inherit; }
-  h1,h2,h3{ font-family:'Fraunces',serif; margin:0; color:var(--ink); font-weight:600; letter-spacing:-0.01em; }
+  h1,h2,h3{ font-family:'Bricolage Grotesque',sans-serif; margin:0; color:var(--ink); font-weight:600; letter-spacing:-0.01em; }
   p{ margin:0; }
   ul{ margin:0; padding:0; list-style:none; }
 
@@ -127,7 +127,7 @@
   .about-grid{ display:grid; grid-template-columns:.85fr 1.15fr; gap:3rem; align-items:center; }
   .about-panel{ background:var(--paper-card); border:1px solid var(--line); border-radius:var(--radius); padding:2.5rem; }
   .about-panel .rings{ width:64px; height:64px; margin-bottom:1.5rem; }
-  .about-panel .pull{ font-family:'Fraunces',serif; font-style:italic; font-size:1.4rem; line-height:1.35; color:var(--pine-dark); }
+  .about-panel .pull{ font-family:'Bricolage Grotesque',sans-serif; font-style:italic; font-size:1.4rem; line-height:1.35; color:var(--pine-dark); }
   .about-copy p{ color:var(--ink-soft); font-size:1.05rem; margin-top:1.1rem; max-width:52ch; }
   .about-copy .btn{ margin-top:1.75rem; }
 
@@ -141,7 +141,7 @@
   .footer-grid{ display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:3rem; }
   .footer-brand img{ height:36px; margin-bottom:1rem; filter:brightness(0) invert(1); }
   .footer-brand p{ color:var(--footer-muted); max-width:34ch; font-size:.95rem; }
-  footer h4{ font-family:'Work Sans',sans-serif; font-size:.82rem; text-transform:uppercase; letter-spacing:.1em; color:var(--footer-muted); margin-bottom:1.1rem; }
+  footer h4{ font-family:'Poppins',sans-serif; font-size:.82rem; text-transform:uppercase; letter-spacing:.1em; color:var(--footer-muted); margin-bottom:1.1rem; }
   footer .flinks{ display:flex; flex-direction:column; gap:.7rem; }
   footer a{ text-decoration:none; color:#DCE0D6; font-size:.95rem; }
   footer a:hover{ color:#fff; }
@@ -362,3 +362,44 @@
 /* ---- Light theme accent tweaks ---- */
 .event-when .day{ color:var(--pine-dark); }
 .template-form button{ color:var(--ink); }
+
+/* Shared layout utilities and responsive safeguards */
+.surface-section { background: var(--paper-card); border-block: 1px solid var(--line); }
+.content-narrow { max-width: 840px; }
+.stack-lg > * + * { margin-top: 2.25rem; }
+.text-link { color: var(--rose-deep); }
+.footer-location { color: var(--footer-muted); font-size: .95rem; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.event-note { display: inline-block; margin-top: 1rem; color: var(--pine-dark); font-weight: 600; }
+.events-hero { position: relative; min-height: min(520px, 70vh); display: grid; place-items: center; overflow: hidden; color: #fff; text-align: left; }
+.events-hero .hero-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.events-hero .hero-overlay { position: relative; width: 100%; padding: clamp(4rem, 10vw, 7rem) 0; background: linear-gradient(90deg, rgba(34, 34, 34, .74), rgba(34, 34, 34, .18)); }
+.events-hero h1, .events-hero .lede { color: #fff; }
+.events-hero .lede { max-width: 48ch; font-size: 1.1rem; }
+.event-card + .event-card { margin-top: 1.5rem; }
+.event-card:not(:has(.event-image)) { grid-template-columns: 100px 1fr; }
+.contact-form .form-success { color: var(--pine-dark); }
+
+@media (max-width: 860px) {
+  body.menu-open { overflow: hidden; }
+  .container { width: min(100% - 2rem, 1200px); }
+  .nav-inner { gap: .75rem; }
+  .brand img { height: 42px; }
+  .nav-links { inset: 72px 1rem auto; max-height: calc(100vh - 88px); overflow: auto; }
+  .nav-cta .btn { padding: .6rem .9rem; }
+  /* These rules follow the desktop grid definitions, so mobile can override them. */
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  .template-form .btn { width: 100%; justify-content: center; }
+  .event-card:not(:has(.event-image)) { grid-template-columns: 1fr; }
+  .events-hero { min-height: 420px; }
+  .events-hero .hero-overlay { background: rgba(34, 34, 34, .58); }
+}
+
+@media (max-width: 480px) {
+  .section { padding-block: 3rem; }
+  .nav-cta .btn { font-size: .8rem; }
+  .hero-actions .btn { width: 100%; justify-content: center; }
+  .course-card, .info-card, .about-panel, .founder-card { padding: 1.4rem; }
+  .founder-photo { width: min(180px, 100%); height: auto; aspect-ratio: 1; }
+  .footer-bottom { margin-top: 2rem; }
+}
