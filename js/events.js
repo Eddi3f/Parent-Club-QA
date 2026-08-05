@@ -1,5 +1,5 @@
 const SHEET_URL =
-    "https://opensheet.elk.sh/144CifvfZXn6lU4cqm9MQGRK62xYkVCrj0wRiB8_x2RM/Parent.Social.Schedule";
+    "https://opensheet.elk.sh/1CFaTiEiO9H3Ev_D0CbX4z1JkQIjo_NlSlr1qf0gYx60/event.schedule";
 
 async function loadEvents() {
 
