@@ -8,8 +8,9 @@ A lightweight, accessible replacement for the current Squarespace site. It uses 
 - `styles.css` — shared design system and responsive styles
 - `js/site.js` — shared navigation, progressive reveal and concept-form behaviour
 - `js/events.js` — public events feed from Google Sheets
-- `Images/` — local image assets
+- `Images/` — local image assets and replacement notes
 - `docs/ARCHITECTURE.md` — content, payment and integration plan
+- `docs/COMPONENTS.md` — reusable UI patterns for future features
 
 ## Editing content
 

@@ -10,6 +10,10 @@
 
   const toggle = document.querySelector('.nav-toggle');
   const navigation = document.getElementById('primaryNav');
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  navigation?.querySelectorAll('a[href]').forEach((link) => {
+    if (link.getAttribute('href') === currentPage) link.setAttribute('aria-current', 'page');
+  });
   const setMenuState = (isOpen) => {
     navigation?.classList.toggle('open', isOpen);
     toggle?.setAttribute('aria-expanded', String(isOpen));
@@ -47,7 +51,10 @@
       if (!form.reportValidity()) return;
       form.hidden = true;
       document.getElementById(noteId)?.setAttribute('hidden', '');
-      document.getElementById(successId)?.removeAttribute('hidden');
+      const success = document.getElementById(successId);
+      success?.removeAttribute('hidden');
+      success?.setAttribute('tabindex', '-1');
+      success?.focus();
     });
   };
 

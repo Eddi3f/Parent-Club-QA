@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact &mdash; Parent Club</title>
-<meta name="description" content="Get in touch with Parent Club, Levenshulme's antenatal classes.">
+<title>Contact Parent Club | Antenatal Classes in Levenshulme</title>
+<meta name="description" content="Get in touch with Parent Club about antenatal courses, Pregnancy Socials and support for expecting parents in South Manchester.">
 <meta name="theme-color" content="#4422bb">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%234422bb'/%3E%3Ccircle cx='13' cy='16' r='6' fill='none' stroke='%23ccccff' stroke-width='2'/%3E%3Ccircle cx='19' cy='16' r='6' fill='none' stroke='%23f2ffff' stroke-width='2'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,84 +16,68 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="container nav-inner">
-    <a class="brand" href="index.html" aria-label="Parent Club home">
-      <img src="https://images.squarespace-cdn.com/content/v1/698c6f72ba0a43623aee7fa8/dc295fec-356e-4afd-b18a-f41611d7c1eb/Logo.png.png?format=1500w" alt="Parent Club">
-    </a>
+    <a class="brand" href="index.html" aria-label="Parent Club home"><img src="Images/parent-club-logo.svg" alt="Parent Club" width="300" height="72"></a>
     <ul class="nav-links" id="primaryNav">
-      <li><a href="about.html">About</a></li>
-      <li><a href="our-services.html">Our Services</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="contact.html" aria-current="page">Contact</a></li>
+      <li><a href="about.html">About</a></li><li><a href="our-services.html">Our Services</a></li><li><a href="events.html">Events</a></li><li><a href="faq.html">FAQ</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html" aria-current="page">Contact</a></li>
     </ul>
-    <div class="nav-cta">
-      <a class="btn btn-primary btn-sm" href="courses-store.html">Book now</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+    <div class="nav-cta"><a class="btn btn-primary btn-sm" href="courses-store.html">Book now</a><button class="nav-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle menu"><span></span><span></span><span></span></button></div>
   </div>
 </header>
 <main id="main">
-  <section class="page-hero">
+  <section class="page-hero contact-hero">
     <div class="container">
-      <p class="eyebrow">Contact</p>
-      <h1>Say hello.</h1>
-      <p class="lede">Questions about a course, an event, or just want to chat things through? We'd love to hear from you.</p>
+      <p class="eyebrow">Contact Parent Club</p>
+      <h1>Let&rsquo;s make this feel simpler.</h1>
+      <p class="lede">Whether you are choosing a course, looking for a friendly local event, or have a question you have been meaning to ask, we would love to hear from you.</p>
+      <p class="response-promise"><span aria-hidden="true">&#9679;</span> We aim to reply within two working days.</p>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container contact-grid">
-      <form class="contact-form reveal" id="contactForm">
-        <label>Your name<input type="text" name="name" required></label>
-        <label>Email address<input type="email" name="email" required></label>
-        <label>Message<textarea name="message" required></textarea></label>
-        <button type="submit" class="btn btn-primary">Send message</button>
-        <p class="form-success" id="contactSuccess" hidden>Thanks &mdash; we'll be in touch soon!</p>
-      </form>
-      <div class="contact-list reveal">
-        <div class="row"><div><strong>Email</strong><span><a href="mailto:parentclubmcr@gmail.com" class="text-link">parentclubmcr@gmail.com</a></span></div></div>
-        <div class="row"><div><strong>Instagram</strong><span><a href="https://www.instagram.com/parentclub_/" target="_blank" rel="noopener noreferrer" class="text-link">@parentclub_</a></span></div></div>
-        <div class="row"><div><strong>Where we are</strong><span>Levenshulme, Burnage &amp; Stockport, Greater Manchester</span></div></div>
-        <div class="row"><div><strong>Free templates</strong><span>Send us a message and we'll email over our birth plan &amp; packing list templates.</span></div></div>
+  <section class="section contact-section">
+    <div class="container contact-layout">
+      <div class="contact-form-card reveal">
+        <div class="contact-card-heading"><p class="eyebrow">Send a message</p><h2>How can we help?</h2><p>Tell us a little about what you need and we will point you in the right direction.</p></div>
+        <!-- Concept form: connect to a Cloudflare Worker or trusted form provider before launch. -->
+        <form class="contact-form" id="contactForm">
+          <label for="contactName">Your name<input id="contactName" type="text" name="name" autocomplete="name" required></label>
+          <label for="contactEmail">Email address<input id="contactEmail" type="email" name="email" autocomplete="email" required></label>
+          <label for="contactTopic">What can we help with?<select id="contactTopic" name="topic"><option value="">Choose an option (optional)</option><option>Courses and booking</option><option>Pregnancy Socials</option><option>General question</option><option>Something else</option></select></label>
+          <label for="contactMessage">Your message<textarea id="contactMessage" name="message" required></textarea></label>
+          <button type="submit" class="btn btn-primary">Send message <span aria-hidden="true">&rarr;</span></button>
+        </form>
+        <p class="form-success" id="contactSuccess" hidden tabindex="-1">Thanks &mdash; we&rsquo;ll be in touch soon.</p>
       </div>
+
+      <aside class="contact-help reveal" aria-label="Other ways we can help">
+        <div class="help-panel">
+          <span class="panel-icon" aria-hidden="true">?</span><h2>Looking for a quick answer?</h2><p>Our FAQs cover the details people usually want to know before booking.</p><a class="text-link with-arrow" href="faq.html">Browse FAQs <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <div class="help-panel social-panel">
+          <span class="panel-icon" aria-hidden="true">@</span><h2>Come say hello</h2><p>Follow along for local events, course news and practical pregnancy tips.</p>
+          <div class="social-actions"><a class="social-link" href="https://www.instagram.com/parentclub_/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">&nearr;</span></a><!-- Replace this Facebook URL once the official page is confirmed. --><a class="social-link" href="https://www.facebook.com/parentclubmcr" target="_blank" rel="noopener noreferrer">Facebook <span aria-hidden="true">&nearr;</span></a></div>
+        </div>
+        <div class="help-panel compact-panel">
+          <span class="panel-icon" aria-hidden="true">&#9825;</span><div><h2>Not sure where to start?</h2><p>Take a look at our courses, services or upcoming events.</p><div class="context-links"><a href="courses-store.html">Courses</a><a href="our-services.html">Services</a><a href="events.html">Events</a></div></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section location-section surface-section">
+    <div class="container location-layout">
+      <div class="location-copy reveal"><p class="eyebrow">Local, not clinical</p><h2>Made for South Manchester&rsquo;s expecting parents.</h2><p>Our courses and events take place around Levenshulme, with a warm welcome for families from Burnage, Stockport and beyond. We&rsquo;ll always send the exact venue and accessibility details before your session.</p></div>
+      <div class="map-placeholder reveal" role="img" aria-label="Map placeholder for Parent Club venues in Levenshulme, South Manchester"><div class="map-grid" aria-hidden="true"></div><span class="map-pin" aria-hidden="true"></span><p>Levenshulme<br><small>Venue details shared when you book</small></p></div>
     </div>
   </section>
 </main>
 <footer>
   <div class="container footer-grid">
-    <div class="footer-brand">
-      <img src="https://images.squarespace-cdn.com/content/v1/698c6f72ba0a43623aee7fa8/dc295fec-356e-4afd-b18a-f41611d7c1eb/Logo.png.png?format=1500w" alt="Parent Club">
-      <p>Antenatal classes in Levenshulme, for South Manchester's expecting parents.</p>
-    </div>
-    <div>
-      <h4>Explore</h4>
-      <div class="flinks">
-        <a href="about.html">About</a>
-        <a href="our-services.html">Our Services</a>
-        <a href="events.html">Events</a>
-        <a href="faq.html">FAQ</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-    <div>
-      <h4>Get in touch</h4>
-      <div class="flinks">
-        <a href="mailto:parentclubmcr@gmail.com">parentclubmcr@gmail.com</a>
-        <a href="https://www.instagram.com/parentclub_/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <span class="footer-location">Levenshulme, Burnage &amp; Stockport, Greater Manchester</span>
-      </div>
-    </div>
+    <div class="footer-brand"><img src="Images/parent-club-logo.svg" alt="Parent Club" width="300" height="72"><p>Antenatal classes in Levenshulme, for South Manchester&rsquo;s expecting parents.</p></div>
+    <div><h4>Explore</h4><div class="flinks"><a href="about.html">About</a><a href="our-services.html">Our Services</a><a href="events.html">Events</a><a href="faq.html">FAQ</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></div></div>
+    <div><h4>Get in touch</h4><div class="flinks"><a href="mailto:parentclubmcr@gmail.com">parentclubmcr@gmail.com</a><a href="https://www.instagram.com/parentclub_/" target="_blank" rel="noopener noreferrer">Instagram</a><span class="footer-location">Levenshulme, Burnage &amp; Stockport, Greater Manchester</span></div></div>
   </div>
-  <div class="container footer-bottom">
-    <span>&copy; 2026 Parent Club.</span>
-    <span>Concept redesign &mdash; content courtesy of parentclub.uk</span>
-  </div>
+  <div class="container footer-bottom"><span>&copy; 2026 Parent Club.</span><span>Concept redesign &mdash; content courtesy of parentclub.uk</span></div>
 </footer>
-
-  <script src="js/site.js"></script>
+<script src="js/site.js"></script>
 </body>
 </html>

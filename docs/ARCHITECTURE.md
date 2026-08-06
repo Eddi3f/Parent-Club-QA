@@ -27,7 +27,7 @@ The same approach applies to contact/newsletter providers and Google reviews: ke
 
 ## Before launch
 
-- Move the logo and any remaining Squarespace-hosted images into this repository or a controlled media service.
+- Replace the temporary local logo and generated concept image with the approved, licensed Parent Club assets when ready.
 - Replace concept-only form feedback with a real provider endpoint.
 - Add redirects for the existing Squarespace URLs, `sitemap.xml`, `robots.txt`, canonical URLs, analytics consent, and a privacy/cookie policy.
 - Configure a Content Security Policy and image optimisation in Cloudflare.
