@@ -52,7 +52,7 @@
   .btn-sm{ padding:.6rem 1.2rem; font-size:.88rem; }
 
   /* Header */
-  .site-header{ position:sticky; top:0; z-index:50; background:rgba(239,242,233,.88); backdrop-filter:blur(8px); border-bottom:1px solid transparent; transition:box-shadow .3s var(--ease), border-color .3s var(--ease); }
+  .site-header{ position:sticky; top:0; z-index:50; background:rgba(239,242,233,.88); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px); border-bottom:1px solid transparent; transition:box-shadow .3s var(--ease), border-color .3s var(--ease); }
   .site-header.scrolled{ box-shadow:0 8px 24px -18px rgba(38,35,30,.4); border-color:var(--line); }
   .nav-inner{ display:flex; align-items:center; justify-content:space-between; gap:1.5rem; padding-block:.85rem; }
   .brand{ display:flex; align-items:center; text-decoration:none; flex-shrink:0; }
