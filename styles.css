@@ -8,7 +8,7 @@
     --pine-tint:#CCCCFF;
     --rose:#7C5CF0;
     --rose-deep:#4422BB;
-    --honey:#CCCCFF;
+    --honey:#e88d4d;
     --line:#E4E2F5;
     --footer-muted:#B7B3D6;
     --radius:18px;
@@ -119,7 +119,7 @@
   .template-form input{ flex:1 1 230px; padding:.9rem 1.2rem; border-radius:999px; border:1px solid rgba(255,255,255,.35); background:rgba(255,255,255,.08); color:#fff; font-size:1rem; }
   .template-form input::placeholder{ color:#C3CFC1; }
   .template-form button{ background:var(--honey); color:var(--ink); border:none; }
-  .template-form button:hover{ background:#e6b45c; }
+  .template-form button:hover{ background:#d67735; }
   .form-note{ font-size:.82rem; color:#C3CFC1; max-width:52ch; }
   .form-success{ font-size:1.05rem; font-weight:600; color:var(--honey); }
 
