@@ -198,6 +198,7 @@
     width:220px;
     height:220px;
     object-fit:cover;
+    object-position: 50% 20%;
     border-radius:50%;
     display:block;
     margin:0 auto 1.5rem;
